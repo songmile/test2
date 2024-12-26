@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cg.mapper.AccountMapper">
+	<!--更新账户-->
+	<update id="updateMoney">
+		update t_account
+		set money=#{money}
+		where accountNo=#{accountNo}
+	</update>
+
+	<!--根据账户编号查询账户详情-->
+	<select id="selectAccount"
+			resultType="com.cg.entity.Account">
+		select * from t_account
+		where accountNo=#{accountNo}
+	</select>
+</mapper>
